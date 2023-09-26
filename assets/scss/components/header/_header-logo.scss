@@ -1,3 +1,6 @@
+@use "../../presets" as *;
+@use "../../mixins" as *;
+
 .header-logo {
     &__link {
         display: block;
