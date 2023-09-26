@@ -179,6 +179,8 @@ template {
 }
 
 html {
+  overflow-y: scroll;
+
   font-family: "Roboto", sans-serif;
   font-size: 16px;
 }
@@ -189,11 +191,12 @@ body {
 }
 
 h1 {
-  letter-spacing: 0.12em;
+  letter-spacing: 0.078em;
 
   font-family: "Roboto Slab", serif;
   font-size: 3.75rem;
   font-weight: 300;
+  line-height: 1.2em;
 }
 
 a {
@@ -254,7 +257,7 @@ a {
   z-index: 1;
 }
 .header-content__title {
-  margin: 0 0 67px;
+  margin: 0 0 53px;
 
   text-align: center;
 }
@@ -289,18 +292,17 @@ a {
 .header-logo__link {
   display: block;
 
-  margin: 20px 0;
-  padding: 20px 20px 20px 20px;
+  padding: 20.65px 20px 20.65px 0;
 
-  letter-spacing: 0.25em;
+  letter-spacing: 0.22em;
 
   font-size: 1.5rem;
 }
 .header-logo__accent {
   display: inline-block;
 
-  margin-right: 7px;
-  padding: 17px 5px 17px 5px;
+  margin-right: 4px;
+  padding: 14px 1px 13px 5px;
 
   border: 3px solid #d53d27;
 }
@@ -314,7 +316,7 @@ a {
   -ms-flex-pack: end;
   justify-content: end;
 
-  margin: 0;
+  margin: 0 -10px 0 0;
   padding: 0;
 
   list-style: none;
@@ -328,7 +330,7 @@ a {
 
   -webkit-transition: color 0.5s;
           transition: color 0.5s;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.09em;
 
   font-size: 1.125rem;
 }

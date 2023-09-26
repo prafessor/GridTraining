@@ -5,11 +5,11 @@
     }
 
     &__list {
-        @include unlist;
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(40px, max-content));
         justify-content: end;
         gap: $gap;
+        @include unlist(0 -10px 0 0);
     }
 
     &__item {
@@ -19,7 +19,7 @@
         padding: $gap $gap-sm;
 
         font-size: 1.125rem;
-        letter-spacing: 0.1em;
+        letter-spacing: 0.09em;
 
         transition: color 0.5s;
 
