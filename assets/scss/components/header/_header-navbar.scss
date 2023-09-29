@@ -2,33 +2,31 @@
 @use "../../mixins" as *;
 
 .header-navbar {
+  &__btn {
+    display: none;
+  }
 
-    &__btn {
-        display: none;
+  &__list {
+    display: grid;
+    justify-content: end;
+
+    gap: $gap;
+    grid-template-columns: repeat(auto-fit, minmax(40px, max-content));
+    @include unlist(0 -10px 0 0);
+  }
+
+
+  &__link {
+    padding: $gap $gap-sm;
+
+    transition: color 0.5s;
+    letter-spacing: 0.09em;
+
+    font-size: 1.125rem;
+
+    &:hover,
+    &:focus {
+      color: $color-accent;
     }
-
-    &__list {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(40px, max-content));
-        justify-content: end;
-        gap: $gap;
-        @include unlist(0 -10px 0 0);
-    }
-
-    &__item {
-
-    }
-    &__link {
-        padding: $gap $gap-sm;
-
-        font-size: 1.125rem;
-        letter-spacing: 0.09em;
-
-        transition: color 0.5s;
-
-        &:hover,
-        &:focus {
-            color: $color-accent;
-        }
-    }
+  }
 }

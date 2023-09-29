@@ -2,66 +2,76 @@
 @use "../../mixins" as *;
 
 .skill-item {
-    position: relative;
-    overflow: hidden;
+  position: relative;
 
-    &__title {
-        z-index: 1;
-        margin: 0;
-        @include abs-position;
-        @include md-min {
-            font-size: 1.25rem;
-        } 
-        @include md {
-            font-size: 1.125rem;
-        }
+  overflow: hidden;
+
+  &__title {
+    z-index: 1;
+
+    margin: 0;
+
+    @include abs-position;
+    @include md-min {
+      font-size: 1.25rem;
     }
-
-    &__link {
-        padding: $gap;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100%;
-
-        font-size: 1.25rem;
-        letter-spacing: 0.1em;
-        color: $color-white;
-        transition: color 0.5s;
+    @include md {
+      font-size: 1.125rem;
     }
+  }
 
-    &__image {
-        background-color: $color-primary;
-        background-size: cover;
-        background-position: 50% 50%;
-        transition: transform 0.5s;
-        @include abs-position;
-    }
+  &__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-    &__overlay {
-        background-color: $color-primary;
-        opacity: 0.8;
-        transition: opacity 0.5s;
-        @include abs-position;
-    }
+    height: 100%;
+    padding: $gap;
 
-    &:hover {
-        .skill-item__overlay {
-            opacity: 0.95;
-        }
-        .skill-item__image {
-            transform: scale(1.1);
-        }
-        .skill-item__link {
-            color: $color-accent;
-        }
+    transition: color 0.5s;
+    letter-spacing: 0.1em;
+
+    color: $color-white;
+
+    font-size: 1.25rem;
+  }
+
+  &__image {
+    transition: transform 0.5s;
+
+    background-color: $color-primary;
+    background-position: 50% 50%;
+    background-size: cover;
+
+    @include abs-position;
+  }
+
+  &__overlay {
+    transition: opacity 0.5s;
+
+    opacity: 0.8;
+    background-color: $color-primary;
+
+    @include abs-position;
+  }
+
+  &:hover {
+    .skill-item__overlay {
+      opacity: 0.95;
     }
+    .skill-item__image {
+      transform: scale(1.1);
+    }
+    .skill-item__link {
+      color: $color-accent;
+    }
+  }
 }
 
 $count: 9;
 
 @for $i from 1 through $count {
-    .skill-item:nth-of-type(#{$i}) {
-        grid-area: a#{$i};
-    }
+  .skill-item:nth-of-type(#{$i}) {
+    grid-area: a#{$i};
+  }
 }

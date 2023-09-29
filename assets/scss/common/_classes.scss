@@ -2,53 +2,56 @@
 @use "../mixins" as *;
 
 .btn {
-    background-color: rgba($color-white, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-    border-width: 2px;
-    border-style: solid;
-    padding: 0.5em 1em;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  padding: 0.5em 1em;
 
-    letter-spacing: 0.1em;
-    
-    transition: background-color 0.5s;
+  transition: background-color 0.5s;
+  letter-spacing: 0.1em;
 
-    &:hover,
-    &:focus {
-        background-color: $color-accent;
-    }
+  border-width: 2px;
+  border-style: solid;
+  background-color: rgba($color-white, 0.1);
+
+  &:hover,
+  &:focus {
+    background-color: $color-accent;
+  }
 }
 
 .btn--light {
-    @include lg-min {
-        min-width: 250px;
-        min-height: 60px;
-        font-size: 1.125rem;
-    }
-    @include lg-md {
-        min-width: 200px;
-        min-height: 50px;
-    }
-    @include md {
-        min-width: 170px;
-        min-height: 40px;
-    }
+  border-color: $color-white;
 
-    border-color: $color-white;
+  @include lg-min {
+    min-width: 250px;
+    min-height: 60px;
+
+    font-size: 1.125rem;
+  }
+  @include lg-md {
+    min-width: 200px;
+    min-height: 50px;
+  }
+  @include md {
+    min-width: 170px;
+    min-height: 40px;
+  }
 }
 
 .btn--primary {
-    font-size: 1.125rem;
-    min-height: 60px;
-    
-    @include sm-min {
-        min-width: 350px;
-    }
-    @include sm {
-        min-width: 100%;
-    }
-    background-color: rgba($color-primary, 0.8);
-    border-color: $color-primary;
+  min-height: 60px;
+
+  border-color: $color-primary;
+  background-color: rgba($color-primary, 0.8);
+
+  font-size: 1.125rem;
+
+  @include sm-min {
+    min-width: 350px;
+  }
+  @include sm {
+    min-width: 100%;
+  }
 }
